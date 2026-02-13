@@ -1,0 +1,7 @@
+"Give me only the HTML structure and CSS for a Counter App. No React, no JavaScript logic. Just the static UI template."
+
+Give me a modern, portfolio-ready UI design for [TodoList]. Make it visually stunning with gradients, animations, glassmorphism, and clean typography. Only JSX + CSS, no logic. Follow 2024 design trends.
+
+Give me a calm, minimal, portfolio-ready UI for [todoList]. Use soft pastel colors, subtle shadows, smooth transitions, and rounded corners. Include refined typography with proper font pairing, font hierarchy, letter-spacing, and line-height. Use Google Fonts. Only JSX + CSS, no logic.
+
+

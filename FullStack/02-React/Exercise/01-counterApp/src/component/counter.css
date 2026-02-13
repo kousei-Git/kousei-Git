@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Poppins:wght@600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Inter', sans-serif;
+    background: #f5f0eb;
+}
+
+/* ===== SUBTLE BACKGROUND PATTERN ===== */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image:
+        radial-gradient(circle at 20% 30%, #e8dfd5 0%, transparent 50%),
+        radial-gradient(circle at 80% 70%, #dde8e4 0%, transparent 50%);
+    z-index: 0;
+    pointer-events: none;
+}
+
+.container {
+    position: relative;
+    z-index: 1;
+}
+
+/* ===== CARD ===== */
+.card {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 32px 40px;
+    width: 380px;
+    box-shadow:
+        0 4px 6px rgba(0, 0, 0, 0.02),
+        0 12px 24px rgba(0, 0, 0, 0.04);
+    border: 1px solid rgba(0, 0, 0, 0.04);
+    animation: fadeUp 0.6s ease-out;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===== CARD HEADER ===== */
+.card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 32px;
+}
+
+.dot-group {
+    display: flex;
+    gap: 6px;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.dot-1 { background: #f9c4c4; }
+.dot-2 { background: #f9e4b7; }
+.dot-3 { background: #b7e4c7; }
+
+.label {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #b0a99f;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* ===== COUNTER SECTION ===== */
+.counter-section {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.helper-text {
+    font-size: 0.75rem;
+    color: #c4bdb4;
+    font-weight: 500;
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.counter-display {
+    font-family: 'Poppins', sans-serif;
+    font-size: 4rem;
+    font-weight: 700;
+    color: gray;
+    line-height: 1;
+    margin-bottom: 16px;
+    transition: color 0.3s ease;
+}
+
+.progress-bar {
+    width: 60%;
+    height: 4px;
+    background: #f0ece7;
+    border-radius: 100px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.progress-fill {
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(90deg, #c7d2cb, #a8c0b0);
+    border-radius: 100px;
+    transition: width 0.4s ease;
+}
+
+/* ===== BUTTONS ===== */
+.button-group {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    margin-bottom: 28px;
+}
+
+.btn {
+    width: 56px;
+    height: 56px;
+    border-radius: 16px;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.25s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+.btn:active {
+    transform: translateY(0);
+}
+
+/* Decrement */
+.btn-decrement {
+    background: #fdf2f2;
+    color: #d4a0a0;
+    border: 1px solid #f5e0e0;
+}
+
+.btn-decrement:hover {
+    background: #fbe8e8;
+    box-shadow: 0 4px 12px rgba(212, 160, 160, 0.15);
+}
+
+/* Reset */
+.btn-reset {
+    background: #f2f0fd;
+    color: #a8a0d4;
+    border: 1px solid #e5e0f5;
+}
+
+.btn-reset:hover {
+    background: #eae6fb;
+    box-shadow: 0 4px 12px rgba(168, 160, 212, 0.15);
+}
+
+/* Increment */
+.btn-increment {
+    background: #f0f7f2;
+    color: #8cb49c;
+    border: 1px solid #ddeee2;
+}
+
+.btn-increment:hover {
+    background: #e5f2e9;
+    box-shadow: 0 4px 12px rgba(140, 180, 156, 0.15);
+}
+
+
+/* ===== FOOTER ===== */
+.footer {
+    text-align: center;
+    color: #c4bdb4;
+    font-size: 0.72rem;
+    margin-top: 16px;
+    letter-spacing: 0.5px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 480px) {
+    .card {
+        width: 330px;
+        padding: 24px 28px;
+    }
+
+    .counter-display {
+        font-size: 4rem;
+    }
+
+    .btn {
+        width: 48px;
+        height: 48px;
+        border-radius: 14px;
+    }
+
+    .stat-icon {
+        width: 28px;
+        height: 28px;
+    }
+}

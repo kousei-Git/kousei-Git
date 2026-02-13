@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 26: Fauna Style</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Importing a Bold Font for the "EXPERIENCE" look -->
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Montserrat:wght@300;700&family=Noto+Serif+JP:wght@300;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Header -->
+    <nav class="fixed-nav">
+        <div class="logo">FAUNA • <span class="jp">スタイル</span></div>
+        <div class="hint">SCROLL / SWIPE</div>
+    </nav>
+
+    <!-- Background Kanji -->
+    <div class="bg-watermark">日本</div>
+
+    <!-- MAIN GALLERY -->
+    <main class="gallery-wrapper">
+        <div class="gallery-track" id="track">
+
+            <!-- 1. Fuji Urban -->
+            <div class="gallery-item">
+                <div class="img-wrapper" 
+                     data-title="Fujiyoshida" 
+                     data-desc="Urban life meets sacred mountain">
+                    <img src="https://images.unsplash.com/photo-1524413840807-0c3cb6fa808d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=1080&q=80" alt="Fuji">
+                    <div class="overlay-text">EXPLORE</div>
+                </div>
+                <div class="text-wrapper">
+                    <h2 class="jp-title">富士山</h2>
+                    <span class="en-title">Fuji View</span>
+                </div>
+            </div>
+
+            <!-- 2. Lanterns -->
+            <div class="gallery-item">
+                <div class="img-wrapper" 
+                     data-title="Lanterns" 
+                     data-desc="Guiding lights of the summer festival">
+                    <img src="https://images.unsplash.com/photo-1528164344705-47542687000d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=1080&q=80" alt="Lanterns">
+                    <div class="overlay-text">EXPLORE</div>
+                </div>
+                <div class="text-wrapper">
+                    <h2 class="jp-title">祭り</h2>
+                    <span class="en-title">Festival</span>
+                </div>
+            </div>
+
+            <!-- 3. Ramen Shop -->
+            <div class="gallery-item">
+                <div class="img-wrapper" 
+                     data-title="Diner" 
+                     data-desc="Midnight stories in Shinjuku">
+                    <img src="https://images.unsplash.com/photo-1552611052-33e04de081de?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=1080&q=80" alt="Ramen">
+                    <div class="overlay-text">EXPLORE</div>
+                </div>
+                <div class="text-wrapper">
+                    <h2 class="jp-title">ラーメン</h2>
+                    <span class="en-title">Ramen</span>
+                </div>
+            </div>
+
+            <!-- 4. Torii Gate -->
+            <div class="gallery-item">
+                <div class="img-wrapper" 
+                     data-title="Torii" 
+                     data-desc="Gateway to the spirit world">
+                    <img src="https://images.unsplash.com/photo-1478436127897-769e1b3f0f36?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=1080&q=80" alt="Torii">
+                    <div class="overlay-text">EXPLORE</div>
+                </div>
+                <div class="text-wrapper">
+                    <h2 class="jp-title">平和</h2>
+                    <span class="en-title">Lake Ashi</span>
+                </div>
+            </div>
+
+            <!-- 5. Kyoto -->
+            <div class="gallery-item">
+                <div class="img-wrapper" 
+                     data-title="Kyoto" 
+                     data-desc="Echoes of the ancient capital">
+                    <img src="https://images.unsplash.com/photo-1492571350019-22de08371fd3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="Kyoto">
+                    <div class="overlay-text">EXPLORE</div>
+                </div>
+                <div class="text-wrapper">
+                    <h2 class="jp-title">京都</h2>
+                    <span class="en-title">Old Town</span>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- FAUNA STYLE LIGHTBOX -->
+    <div class="lightbox" id="lightbox">
+        
+        <!-- Semi-transparent backdrop -->
+        <div class="lb-backdrop"></div>
+        
+        <div class="lb-close" id="lb-close">CLOSE</div>
+
+        <!-- The Floating Card -->
+        <div class="lb-card">
+            <img src="" id="lb-img" alt="Fullscreen" draggable="false">
+            
+            <!-- Dark Overlay for text contrast -->
+            <div class="lb-overlay"></div>
+
+            <!-- Centered Typography -->
+            <div class="lb-content">
+                <h1 id="lb-title">TITLE</h1>
+                <p id="lb-desc">Description text</p>
+            </div>
+        </div>
+
+        <div class="lb-hint">SWIPE LEFT / RIGHT</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
